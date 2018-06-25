@@ -119,7 +119,15 @@ export default {
     draft: 'Draft',
     delete: 'Delete',
     cancel: 'Cancel',
-    confirm: 'Confirm'
+    confirm: 'Confirm',
+    roleName: 'LoginName',
+    name: 'Name',
+    roleValue: 'Role',
+    xmlName: 'XMlName',
+    xmlAddress: 'XMlAddress',
+    lastOperator: 'LastOperator',
+    createTime: 'CreateTime',
+    modifyTime: 'ModifyTime'
   },
   errorLog: {
     tips: 'Please click the bug icon in the upper right corner',

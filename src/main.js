@@ -16,6 +16,7 @@ import './icons' // icon
 import './errorLog'// error log
 import './permission' // permission control
 import './mock' // simulation data
+import VueResource from 'vue-resource'
 
 import * as filters from './filters' // global filters
 
@@ -24,12 +25,18 @@ Vue.use(Element, {
   i18n: (key, value) => i18n.t(key, value)
 })
 
+Vue.use(VueResource)
+
 // register global utility filters.
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
 
 Vue.config.productionTip = false
+Vue.http.options.emulateJSON = true;
+Vue.http.options.headers = {
+  'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+};
 
 new Vue({
   el: '#app',

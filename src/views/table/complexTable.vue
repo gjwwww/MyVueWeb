@@ -85,11 +85,8 @@
 
     <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible">
       <el-form :rules="rules" ref="dataForm" :model="temp" label-position="left" label-width="70px" style='width: 400px; margin-left:50px;'>
-        <el-form-item :label="$t('table.type')" prop="type">
-          <el-select class="filter-item" v-model="temp.type" placeholder="Please select">
-            <el-option v-for="item in  calendarTypeOptions" :key="item.key" :label="item.display_name" :value="item.key">
-            </el-option>
-          </el-select>
+        <el-form-item :label="$t('table.roleName')" prop="roleName">
+          <el-input v-model="temp.rolename"></el-input>
         </el-form-item>
         <el-form-item :label="$t('table.date')" prop="timestamp">
           <el-date-picker v-model="temp.timestamp" type="datetime" placeholder="Please pick a date">
@@ -176,6 +173,9 @@ export default {
       showReviewer: false,
       temp: {
         id: undefined,
+        rolename: '',
+        name: '',
+        role: '',
         importance: 1,
         remark: '',
         timestamp: new Date(),
@@ -192,7 +192,7 @@ export default {
       dialogPvVisible: false,
       pvData: [],
       rules: {
-        type: [{ required: true, message: 'type is required', trigger: 'change' }],
+        roleName: [{ required: true, message: '请输入登录名', trigger: 'change' }],
         timestamp: [{ type: 'date', required: true, message: 'timestamp is required', trigger: 'change' }],
         title: [{ required: true, message: 'title is required', trigger: 'blur' }]
       },

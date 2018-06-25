@@ -56,7 +56,9 @@ export default {
     exportZip: 'Export Zip',
     theme: '换肤',
     clipboardDemo: 'Clipboard',
-    i18n: '国际化'
+    i18n: '国际化',
+    xmlmanage: 'XML管理',
+    xmlFile: 'XML文件'
   },
   navbar: {
     logOut: '退出登录',
@@ -119,7 +121,16 @@ export default {
     draft: '草稿',
     delete: '删除',
     cancel: '取 消',
-    confirm: '确 定'
+    confirm: '确 定',
+    dd: '测试',
+    roleName: '登录账号',
+    name: '姓名',
+    roleValue: '角色',
+    xmlName: 'XML名称',
+    xmlAddress: 'XML地址',
+    lastOperator: '最后操作人',
+    createTime: '创建时间',
+    modifyTime: '修改时间'
   },
   errorLog: {
     tips: '请点击右上角bug小图标',

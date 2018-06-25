@@ -298,6 +298,39 @@ export const asyncRouterMap = [
     component: Layout,
     children: [{ path: 'index', component: () => import('@/views/i18n-demo/index'), name: 'i18n', meta: { title: 'i18n', icon: 'international' }}]
   },
-
+  {
+    path: '/test',
+    component: Layout,
+    children: [{ path: 'test', component: () => import('@/views/test/test'), name: 'test', meta: { title: 'test', icon: 'international' }}]
+  },
+  {
+    path: '/role',
+    component: Layout,
+    children: [{ path: 'role', component: () => import('@/views/role/role'), name: 'role', meta: { title: 'role', icon: 'international' }}]
+  },
+  {
+    path: '/role',
+    component: Layout,
+    redirect: '/role/role',
+    name: '权限和账户',
+    meta: {
+      title: 'role',
+      icon: 'theme'
+    },
+    children: [
+      { path: '权限', component: () => import('@/views/role/role'), name: 'role', meta: { title: 'role' }},
+      { path: 'export-selected-excel', component: () => import('@/views/excel/selectExcel'), name: 'selectExcel', meta: { title: 'selectExcel' }},
+      { path: 'upload-excel', component: () => import('@/views/excel/uploadExcel'), name: 'uploadExcel', meta: { title: 'uploadExcel' }}
+    ]
+  },
+  {
+    path: '/xmlmanage',
+    component: Layout,
+    redirect: 'xmlmanage/xmlFile',
+    name: 'xmlFile',
+    children: [
+      { path: 'xmlFile', component: () => import('@/views/xmlmanage/xmlFile'), name: 'xmlFile', meta: { title: 'xmlFile', icon: 'theme' }}
+    ]
+  },
   { path: '*', redirect: '/404', hidden: true }
 ]
