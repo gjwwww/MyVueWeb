@@ -332,5 +332,23 @@ export const asyncRouterMap = [
       { path: 'xmlFile', component: () => import('@/views/xmlmanage/xmlFile'), name: 'xmlFile', meta: { title: 'xmlFile', icon: 'theme' }}
     ]
   },
+  {
+    path: '/reporterManage',
+    component: Layout,
+    redirect: 'reporterManage',
+    name: 'reportermanage',
+    meta: {
+      title: 'reporter',
+      icon: 'theme'
+    },
+    children: [
+      {
+        path: 'offilineBussiness', component: () => import('@/views/reporterManage/offilineBusiness'), name: 'offiline', meta: { title: 'offline' }
+      },
+      {
+        path: 'collectionStatistics', component: () => import('@/views/reporterManage/collectionStatistics'), name: 'collection', meta: { title: 'collection' }
+      }
+    ]
+  },
   { path: '*', redirect: '/404', hidden: true }
 ]

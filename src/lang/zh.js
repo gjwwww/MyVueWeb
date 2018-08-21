@@ -130,7 +130,12 @@ export default {
     xmlAddress: 'XML地址',
     lastOperator: '最后操作人',
     createTime: '创建时间',
-    modifyTime: '修改时间'
+    modifyTime: '修改时间',
+    importFile: '导入',
+    statisticalMethod: '统计方式',
+    statisticalPosition: '统计岗位',
+    dateStart: '起始时间',
+    dateEnd: '结束时间'
   },
   errorLog: {
     tips: '请点击右上角bug小图标',

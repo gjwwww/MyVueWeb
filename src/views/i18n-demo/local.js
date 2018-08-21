@@ -13,7 +13,9 @@ export default {
       success: '成功按钮',
       info: '信息按钮',
       warning: '警告按钮',
-      danger: '危险按钮'
+      danger: '危险按钮',
+      dateStart: '起始时间',
+      dateEnd: '结束时间'
     }
 
   },
